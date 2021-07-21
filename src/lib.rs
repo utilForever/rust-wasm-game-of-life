@@ -2,6 +2,7 @@ extern crate js_sys;
 
 mod utils;
 
+use std::fmt;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -117,8 +118,6 @@ impl Universe {
         self.cells.as_ptr()
     }
 }
-
-use std::fmt;
 
 impl fmt::Display for Universe {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
