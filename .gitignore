@@ -21,3 +21,7 @@ Cargo.lock
 
 # WebAssembly log file
 wasm-pack.log
+
+# npm related file and folder
+/www/package-lock.json
+/www/dist/
