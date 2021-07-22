@@ -75,7 +75,7 @@ const drawCells = () => {
 };
 
 const renderLoop = () => {
-    debugger;
+    // debugger;
     universe.tick();
 
     drawGrid();

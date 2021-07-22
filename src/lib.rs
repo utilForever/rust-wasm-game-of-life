@@ -67,6 +67,7 @@ impl Universe {
                 let cell = self.cells[idx];
                 let live_neighbors = self.live_neighbor_count(row, col);
 
+                /*
                 log!(
                     "cell[{}, {}] is initially {:?} and has {} live neighbors",
                     row,
@@ -74,6 +75,7 @@ impl Universe {
                     if cell == true { Cell::Alive } else { Cell::Dead },
                     live_neighbors
                 );
+                */
 
                 next.set(idx, match (cell, live_neighbors) {
                     // Rule 1: Any live cell with fewer than two live neighbours
@@ -92,13 +94,15 @@ impl Universe {
                     (otherwise, _) => otherwise,
                 });
 
-                log!("    it becomes {:?}", if self.cells[idx] == true { Cell::Alive } else { Cell::Dead });
+                // log!("    it becomes {:?}", if self.cells[idx] == true { Cell::Alive } else { Cell::Dead });
 
+                /*
                 if cell == true && next[idx] == false {
                     log!("cell[{}, {}] transitioned Alive to Dead", row, col);
                 } else if cell == false && next[idx] == true {
                     log!("cell[{}, {}] transitioned Dead to Alive", row, col);
                 }
+                */
             }
         }
 
