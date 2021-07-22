@@ -93,6 +93,12 @@ impl Universe {
                 });
 
                 log!("    it becomes {:?}", if self.cells[idx] == true { Cell::Alive } else { Cell::Dead });
+
+                if cell == true && next[idx] == false {
+                    log!("cell[{}, {}] transitioned Alive to Dead", row, col);
+                } else if cell == false && next[idx] == true {
+                    log!("cell[{}, {}] transitioned Dead to Alive", row, col);
+                }
             }
         }
 
