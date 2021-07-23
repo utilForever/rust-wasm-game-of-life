@@ -75,13 +75,17 @@ const drawCells = () => {
 };
 
 let animationId = null;
+const ticksPerFrame = document.getElementById("ticks-per-frame");
 
 const renderLoop = () => {
     drawGrid();
     drawCells();
 
     // debugger;
-    universe.tick();
+    for (let i = 1; i <= ticksPerFrame.valueAsNumber; ++i)
+    {
+        universe.tick();
+    }
 
     animationId = requestAnimationFrame(renderLoop);
 };
