@@ -189,6 +189,60 @@ impl Universe {
             false => true,
         });
     }
+
+    pub fn insert_glider(&mut self, row: u32, column: u32) {
+        if row < 1 || column < 1 || row > self.height - 2 || column > self.width - 2 {
+            return
+        }
+
+        let pattern = [
+            false, true, false,
+            false, false, true,
+            true, true, true
+        ];
+        let mut pattern_idx = 0;
+
+        for i in (row-1)..(row+2) {
+            for j in (column-1)..(column+2) {
+                let idx = self.get_index(i, j);
+                self.cells.set(idx, pattern[pattern_idx]);
+                pattern_idx += 1;
+            }
+        }
+    }
+
+    pub fn insert_pulsar(&mut self, row: u32, column: u32) {
+        if row < 7 || column < 7 || row > self.height - 8 || column > self.width - 8 {
+            return
+        }
+
+        let pattern = [
+            false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+            false, false, false, true, true, true, false, false, false, true, true, true, false, false, false,
+            false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+            false, true, false, false, false, false, true, false, true, false, false, false, false, true, false,
+            false, true, false, false, false, false, true, false, true, false, false, false, false, true, false,
+            false, true, false, false, false, false, true, false, true, false, false, false, false, true, false,
+            false, false, false, true, true, true, false, false, false, true, true, true, false, false, false,
+            false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+            false, false, false, true, true, true, false, false, false, true, true, true, false, false, false,
+            false, true, false, false, false, false, true, false, true, false, false, false, false, true, false,
+            false, true, false, false, false, false, true, false, true, false, false, false, false, true, false,
+            false, true, false, false, false, false, true, false, true, false, false, false, false, true, false,
+            false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+            false, false, false, true, true, true, false, false, false, true, true, true, false, false, false,
+            false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
+        ];
+        let mut pattern_idx = 0;
+
+        for i in (row-7)..(row+8) {
+            for j in (column-7)..(column+8) {
+                let idx = self.get_index(i, j);
+                self.cells.set(idx, pattern[pattern_idx]);
+                pattern_idx += 1;
+            }
+        }
+    }
 }
 
 impl Universe {
