@@ -140,6 +140,18 @@ impl Universe {
         }
     }
 
+    pub fn reset(&mut self) {
+        for i in 0..(self.width * self.height) as usize {
+            self.cells.set(i, js_sys::Math::random() < 0.5);
+        }
+    }
+
+    pub fn reset_all_dead(&mut self) {
+        for i in 0..(self.width * self.height) as usize {
+            self.cells.set(i, false);
+        }
+    }
+
     pub fn render(&self) -> String {
         self.to_string()
     }

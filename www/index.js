@@ -115,6 +115,18 @@ playPauseButton.addEventListener("click", event => {
     }
 });
 
+const resetRandomButton = document.getElementById("reset-random");
+
+resetRandomButton.addEventListener("click", event => {
+    universe.reset();
+});
+
+const resetAllDeadButton = document.getElementById("reset-all-dead");
+
+resetAllDeadButton.addEventListener("click", event => {
+    universe.reset_all_dead();
+});
+
 canvas.addEventListener("click", event => {
     const boundingRect = canvas.getBoundingClientRect();
 
