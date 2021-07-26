@@ -15,6 +15,10 @@
         align-items: center;
         justify-content: center;
       }
+      #fps {
+        white-space: pre;
+        font-family: monospace;
+      }
     </style>
   </head>
   <body>
@@ -27,6 +31,7 @@
       <input type="range" id="ticks-per-frame" name="ticks-per-frame" min="1" max="8" value="1">
       <label for="ticks-per-frame">Ticks per Frame (min: 1, max: 8)</label>
     </div>
+    <div id="fps"></div>
     <canvas id="game-of-life-canvas"></canvas>
     <script src="./bootstrap.js"></script>
   </body>
