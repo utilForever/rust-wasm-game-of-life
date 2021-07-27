@@ -1,2 +1,54 @@
 # rust-wasm-game-of-life
-A simple Rust and WebAssembly example implementing the Game of Life
+
+<img src="./media/logo.png" width=298 height=188 />
+
+rust-wasm-game-of-life is a simple Rust and WebAssembly example implementing the Game of Life based on [Rust and WebAssembly book](https://rustwasm.github.io/docs/book/introduction.html).
+
+## Screenshot
+
+<img src="./media/screenshot.png" width=442 height=588 />
+
+## Requirements
+
+  * [The Rust Toolchain](https://www.rust-lang.org/tools/install)
+  * [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
+  * [cargo-generate](https://github.com/ashleygwilliams/cargo-generate)
+  * [npm](https://docs.npmjs.com/getting-started)
+
+## Quick Start
+
+You can install using `npm`.
+
+```
+npm i @utilforever/rust-wasm-game-of-life
+```
+
+Also, you can build and publish on `npm`.
+
+```
+npm login
+wasm-pack build --scope your_organization
+wasm-pack publish -access public
+```
+
+## How To Contribute
+
+Contributions are always welcome, either reporting issues/bugs or forking the repository and then issuing pull requests when you have completed some additional coding that you feel will be beneficial to the main project. If you are interested in contributing in a more dedicated capacity, then please contact me.
+
+## Contact
+
+You can contact me via e-mail (utilForever at gmail.com). I am always happy to answer questions or help with any issues you might have, and please be sure to share any additional work or your creations with me, I love seeing what other people are making.
+
+## License
+
+<img align="right" src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png">
+
+The class is licensed under the [MIT License](http://opensource.org/licenses/MIT):
+
+Copyright &copy; 2021 [Chris Ohk](https://github.com/utilforever)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
